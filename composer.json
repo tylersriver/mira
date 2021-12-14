@@ -1,0 +1,20 @@
+{
+    "name": "tyler/yocto-view",
+    "authors": [
+        {
+            "name": "tylersriver",
+            "email": "tyler.w.sriver@eagles.oc.edu"
+        }
+    ],
+    "scripts": {
+        "test": "pest --coverage"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yocto\\Views\\": "src\\"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21"
+    }
+}
