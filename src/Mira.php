@@ -1,8 +1,8 @@
 <?php
 
-namespace Yocto\Views;
+namespace Mira;
 
-class Views
+class Mira
 {
     /**
      * @var string

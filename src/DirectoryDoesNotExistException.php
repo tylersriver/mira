@@ -1,6 +1,6 @@
 <?php
 
-namespace Yocto\Views;
+namespace Mira;
 
 class DirectoryDoesNotExistException extends \Exception
 {

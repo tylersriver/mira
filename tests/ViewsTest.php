@@ -1,18 +1,18 @@
 <?php
 
-use Yocto\Views\DirectoryDoesNotExistException;
-use Yocto\Views\Views;
+use Mira\DirectoryDoesNotExistException;
+use Mira\Mira;
 
 beforeEach(function() {
-    $this->views = new Views(__DIR__ . '/views');
+    $this->views = new Mira(__DIR__ . '/views');
 });
 
 it("throws exception", function () {
-    new Views(__DIR__ . '/dir/does/not/exist');
+    new Mira(__DIR__ . '/dir/does/not/exist');
 })->throws(DirectoryDoesNotExistException::class, 'Directory ' . __DIR__ . '/dir/does/not/exist' . ' does not exist');
 
 it('exists', function() {
-    expect($this->views)->toBeInstanceOf(Views::class);
+    expect($this->views)->toBeInstanceOf(Mira::class);
 });
 
 it("renders a view", function() {
