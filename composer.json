@@ -7,7 +7,8 @@
         }
     ],
     "scripts": {
-        "test": "pest --coverage"
+        "test": "pest --coverage",
+        "test-github": "pest --no-coverage"
     },
     "autoload": {
         "psr-4": {
