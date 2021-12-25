@@ -1,5 +1,7 @@
 {
     "name": "tyler/yocto-view",
+    "description": "Tiny template render engine",
+    "license": "MIT",
     "authors": [
         {
             "name": "tylersriver",
