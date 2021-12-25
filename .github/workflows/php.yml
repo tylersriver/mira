@@ -22,8 +22,8 @@ jobs:
     # - name: Run Linter
       # run: composer run-script lint
       
-    # - name: Run Static Analysis
-    #   run: composer run-script stan    
+    - name: Run Static Analysis
+      run: composer run-script stan    
 
     # - name: Run Mess Detection
       # run: composer run-script md

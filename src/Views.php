@@ -55,9 +55,11 @@ class Views
     }
 
     /**
+     * This method is private because it should only becalled from inside
+     * a template which has access to $this
      * @param string $viewName
      */
-    private function insert(string $viewName): void
+    private function insert(string $viewName): void /** @phpstan-ignore-line */
     {
         $filePath = $this->viewsDirectory . '/' . $viewName . '.' . $this->viewExtension;
         if (!file_exists($filePath)) {
@@ -68,10 +70,10 @@ class Views
     }
 
     /**
-     * @param  mixed $string
+     * @param  string $string
      * @return string
      */
-    public function e($string): string
+    public function e(string $string): string
     {
         $flags = ENT_QUOTES | (defined('ENT_SUBSTITUTE') ? ENT_SUBSTITUTE : 0);
         return htmlspecialchars($string, $flags, 'UTF-8');
