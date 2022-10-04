@@ -1,18 +1,18 @@
 <?php
 
 use Mira\DirectoryDoesNotExistException;
-use Mira\Mira;
+use Mira\Engine;
 
 beforeEach(function() {
-    $this->views = new Mira(__DIR__ . '/views');
+    $this->views = new Engine(__DIR__ . '/views');
 });
 
 it("throws exception", function () {
-    new Mira(__DIR__ . '/dir/does/not/exist');
+    new Engine(__DIR__ . '/dir/does/not/exist');
 })->throws(DirectoryDoesNotExistException::class, 'Directory ' . __DIR__ . '/dir/does/not/exist' . ' does not exist');
 
 it('exists', function() {
-    expect($this->views)->toBeInstanceOf(Mira::class);
+    expect($this->views)->toBeInstanceOf(Engine::class);
 });
 
 it("renders a view", function() {

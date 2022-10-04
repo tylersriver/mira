@@ -2,7 +2,7 @@
 
 namespace Mira;
 
-class Mira
+class Engine
 {
     /**
      * @var string
@@ -19,7 +19,7 @@ class Mira
      *
      * @param  string $viewsDirectory
      * @param  string $viewExtension
-     * @throws \Exception
+     * @throws DirectoryDoesNotExistException
      */
     public function __construct(string $viewsDirectory, string $viewExtension = 'phtml')
     {
