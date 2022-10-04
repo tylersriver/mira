@@ -7,7 +7,7 @@ A Tiny view renderer
 ```php
 // assumes a __DIR__/path/to/dir/view.phtml file exists
 
-$mira = new Mira\Mira(__DIR__ . '/path/to/views');
+$mira = new Mira\Engine(__DIR__ . '/path/to/views');
 
 // title will be injected as variable $title
 $page = $mira->render('view', ['title' => 'title']);
